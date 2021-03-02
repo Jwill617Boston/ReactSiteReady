@@ -16,7 +16,7 @@ class Directory extends Component {
                 {
                   id: 1,
                   name: 'Chrome River Campground ',
-                  image: 'assets/images/chrome-river.jpg',
+                  image: './assets/images/chrome-river.jpg',
                   elevation: 877,
                   description: "Spend a few sunny days and starry nights beneath a canopy of old-growth firs at this enchanting spot by the Chrome River."
                 },
@@ -41,8 +41,8 @@ class Directory extends Component {
     render() {
         const directory = this.state.campsites.map(campsite => {
             return(
-                <div className="col">
-                    <image src={campsite.image} alt={campsite.name} />
+                <div key={campsite.id} className="col">
+                    <img src={campsite.image} alt={campsite.name} />
                     <h2>{campsite.name}</h2>
                     <p>{campsite.description}</p>
                 </div>
@@ -59,3 +59,5 @@ class Directory extends Component {
         );
     }
 }
+
+export default Directory; 
