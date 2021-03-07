@@ -31,11 +31,9 @@ class Directory extends Component {
         });
 
         return (
-            <div className="container">
-                <div className="row">
-                    {directory}
-                </div>
-               <CampsiteInfo campsite={this.state.selectedCampsite} />
+            <div className="row">
+                {directory}
+                <CampsiteInfo campsite={this.state.selectedCampsite} />
             </div>
         );
     }

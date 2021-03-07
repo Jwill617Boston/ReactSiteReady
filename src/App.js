@@ -15,17 +15,15 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Container fluid>
-                    <Row>
-                        <Col>                        
-                            <Navbar className="bg-dark" dark color="primary">                
+                <Container fluid>                                   
+                        <Row>
+                            <Navbar className="bg-dark col" dark color="primary">                
                             <NavbarBrand href="/">NuCamp</NavbarBrand>                               
-                            </Navbar> 
-                        </Col>                       
-                    </Row>
-                </Container>                
-                    <Directory campsites={this.state.campsites} />                    
-                </div>    
+                            </Navbar>
+                        </Row>                   
+                        <Directory campsites={this.state.campsites} />
+                </Container>                               
+            </div>    
         );
     }
 }
