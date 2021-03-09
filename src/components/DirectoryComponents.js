@@ -6,35 +6,30 @@ class Directory extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedCampsite: null
+           
         };
-    }
-
-    onCampsiteSelect(campsite) {
-        this.setState({selectedCampsite: campsite});
-    }
-
-    
+    }      
 
     render() {
         const directory = this.props.campsites.map(campsite => {
-            return (
+            return (                              
                 <div key={campsite.id} className="col-md-5 m-1">
-                    <Card onClick={() => this.onCampsiteSelect(campsite)}>
+                    <Card onClick={() => this.props.onClick(campsite.id)}>
                         <CardImg width="100%" src={campsite.image} alt={campsite.name} />
                         <CardImgOverlay>
                             <CardTitle>{campsite.name}</CardTitle>
                         </CardImgOverlay>
                     </Card>
-                </div>
+                    </div>                              
             );
         });
 
         return (
-            <div className="row">
+            <div className="container">
+            <div className="row align-center">
                 {directory}
-                <CampsiteInfo campsite={this.state.selectedCampsite} />
             </div>
+        </div>
         );
     }
 }

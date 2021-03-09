@@ -10,11 +10,15 @@ class CampsiteInfo extends Component {
     renderComments(comments) {
         if (comments) {
             return (
-                <div className="col-md-5 m-1">
-                    <h4>Comments</h4>
-                    <div>
-                    {comments.map(comment => <div key={comment.id}> {comment.text} </div>)}
-                    {comments.map(comment => <div key={comment.id}> {comment.author} - {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))} </div>)}
+                <div>
+                    <div className="container">
+                        <div className="row-col-4">   
+                            <h4>Comments</h4>
+                            <div>
+                            {comments.map(comment => <div key={comment.id}> {comment.text} </div>)}
+                            {comments.map(comment => <div key={comment.id}> {comment.author} - {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))} </div>)}
+                            </div>
+                        </div>
                     </div>
                 </div>
             )
@@ -37,9 +41,15 @@ class CampsiteInfo extends Component {
     render () {        
         if (this.props.campsite) {
             return (
-                <div className="col-md-5 m-1">
-                    <div>{this.renderCampsite(this.props.campsite)}</div>
-                    <div>{this.renderComments(this.props.campsite.comments)}</div>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-5 m-1 align-center">                                            
+                        <div>{this.renderCampsite(this.props.campsite)}</div>
+                        </div>
+                        <div className="col-md-5 m-1 text-center"> 
+                        <div>{this.renderComments(this.props.campsite.comments)}</div> 
+                        </div>                   
+                    </div>
                 </div>
                 )
         }
