@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, Row, Col, Container } from 'reactstrap';
+import React from 'react';
+import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
 class CampsiteInfo extends Component {
     constructor(props) {
@@ -7,7 +7,7 @@ class CampsiteInfo extends Component {
         this.state = {};
     };
 
-    renderComments(comments) {
+    renderComments({comments}) {
         if (comments) {
             return (
                 <div>
@@ -25,7 +25,7 @@ class CampsiteInfo extends Component {
         }
     }
 
-    renderCampsite(campsite) {
+    renderCampsite({campsite}) {
         console.log(campsite)
         return (    
                 <Card>

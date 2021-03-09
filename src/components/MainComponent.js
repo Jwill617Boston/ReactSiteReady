@@ -3,7 +3,6 @@ import { Navbar, NavbarBrand } from 'reactstrap';
 import Directory from './DirectoryComponents';
 import CampsiteInfo from './CampsiteInfoComponent';
 import { CAMPSITES } from '../shared/campsites';
-import MainComponent from './MainComponent';
 
 class Main extends Component {
     constructor(props) {
@@ -22,7 +21,7 @@ class Main extends Component {
         return (
             <div>
                 <Navbar dark color="primary">
-                    <div className="container-fluid">
+                    <div className="container-fluid justify-content-left">
                         <NavbarBrand href="/">NuCamp</NavbarBrand>
                     </div>
                 </Navbar>                
