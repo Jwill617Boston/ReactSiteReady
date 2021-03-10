@@ -1,5 +1,8 @@
-import React from 'react';
+
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
+import React, { Component } from 'react';
+
+
 
 class CampsiteInfo extends Component {
     constructor(props) {
@@ -25,7 +28,7 @@ class CampsiteInfo extends Component {
         }
     }
 
-    renderCampsite({campsite}) {
+    renderCampsite(campsite) {
         console.log(campsite)
         return (    
                 <Card>
