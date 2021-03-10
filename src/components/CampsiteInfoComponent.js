@@ -10,7 +10,7 @@ class CampsiteInfo extends Component {
         this.state = {};
     };
 
-    renderComments({comments}) {
+    renderComments(comments) {
         if (comments) {
             return (
                 <div>
