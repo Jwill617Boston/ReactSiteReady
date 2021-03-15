@@ -35,6 +35,8 @@ class Main extends Component {
                 <Switch>
                     <Route path='/home' component={HomePage} />
                     <Route exact path='/directory' render={() => <Directory campsites={this.state.campsites} />} />
+                    <Route exact path='/aboutus' render={() => <About partners={this.state.campsites} />} />
+                    <Route exact path='/contactus' render={() => <About partners={this.state.campsites} />} />
                     <Redirect to='/home' />
                 </Switch>
                 <Footer />
