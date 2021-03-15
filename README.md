@@ -69,3 +69,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # ReactSiteReady
+
+
+Node Packages I added
+yarn add react-router-dom@5.2.0
+yarn add reactstrap@8.5.1
+yarn add react-popper@1.3.6
+yarn add bootstrap@4.5.2
