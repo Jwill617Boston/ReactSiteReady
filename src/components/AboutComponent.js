@@ -3,6 +3,8 @@ import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'r
 import { Link } from 'react-router-dom';
 
 
+
+
 function About(props) {
 
     const partners = props.partners.map(partner => {
@@ -10,6 +12,25 @@ function About(props) {
             <h5>{partner.name}</h5>
         );
     });
+
+    function RenderPartner(partner) {
+        const image = props.image
+        const name = props.name
+        const description = props.description
+        if (partner) {
+        return (
+            <React.Fragment>
+                <Media width="150" src={image} alt={name} />
+                <Media body className="ml-5 mb-4">
+                    <Media heading>{name}</Media>
+                    {description}
+                </Media>
+            </React.Fragment>
+        );
+    }
+    }; 
+
+
 
     return (
         <div className="container">
