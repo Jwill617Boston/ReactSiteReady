@@ -1,7 +1,7 @@
 import React from 'react';
 import { Media } from 'reactstrap';
 
-
+f
 
 
 function RenderPartner(props) {
