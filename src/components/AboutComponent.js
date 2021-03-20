@@ -1,11 +1,8 @@
 import React from 'react';
 import { Media } from 'reactstrap';
 
-f
-
-
-function RenderPartner(props) {
-    const {name, image, description} = props;
+function RenderPartner(partners) {
+    const {name, image, description} = partners;
 
     return (
         <React.Fragment>
@@ -19,15 +16,13 @@ function RenderPartner(props) {
     }
 
 
-function About({partners}) { 
-
-    render(); {
+function About(props) {     
         return (            
-                <Media tag="li" key={partners.id}>
+                <Media tag="li" key={props.id}>
                 <RenderPartner />
                 </Media>            
         );
-    }  
+ 
 }
 
 
