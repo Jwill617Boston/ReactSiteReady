@@ -1,16 +1,21 @@
 
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
-import React, { Component } from 'react';
 
 
+    function RenderCampsite({campsite}) {
+        console.log(campsite)
+        return (    
+                <Card>
+                    <CardImg top src={campsite.image} alt={campsite.name} />
+                    <CardBody>
+                        <CardTitle>{campsite.name}</CardTitle>
+                        <CardText>{campsite.description}</CardText>
+                    </CardBody>
+                </Card>
+                )
+    }
 
-class CampsiteInfo extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    };
-
-    renderComments({comments}) {
+ function RenderComments({comments}) {
         if (comments) {
             return (
                 <div>
@@ -28,20 +33,8 @@ class CampsiteInfo extends Component {
         }
     }
 
-    renderCampsite({campsite}) {
-        console.log(campsite)
-        return (    
-                <Card>
-                    <CardImg top src={campsite.image} alt={campsite.name} />
-                    <CardBody>
-                        <CardTitle>{campsite.name}</CardTitle>
-                        <CardText>{campsite.description}</CardText>
-                    </CardBody>
-                </Card>
-                )
-    }
 
-    function CampsiteInfo(props) {
+ function CampsiteInfo(props) {
         if (props.campsite) {
             return (
                 <div className="container">
@@ -54,5 +47,4 @@ class CampsiteInfo extends Component {
         }
         return <div />;
     }
-}   
     export default CampsiteInfo;

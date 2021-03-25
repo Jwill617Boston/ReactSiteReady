@@ -13,18 +13,16 @@ function RenderPartner(props) {
             </Media>
         </React.Fragment>
         );
-    }
+    };
 
 
-function About({partners}) { 
-
-    render(); {
+function About({partners}) {     
         return (            
                 <Media tag="li" key={partners.id}>
                 <RenderPartner />
                 </Media>            
         );
-    }  
+      
 }
 
 
