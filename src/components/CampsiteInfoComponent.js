@@ -10,7 +10,7 @@ class CampsiteInfo extends Component {
         this.state = {};
     };
 
-    renderComments(comments) {
+    renderComments({comments}) {
         if (comments) {
             return (
                 <div>
@@ -28,7 +28,7 @@ class CampsiteInfo extends Component {
         }
     }
 
-    renderCampsite(campsite) {
+    renderCampsite({campsite}) {
         console.log(campsite)
         return (    
                 <Card>
@@ -41,25 +41,18 @@ class CampsiteInfo extends Component {
                 )
     }
 
-    render () {        
-        if (this.props.campsite) {
+    function CampsiteInfo(props) {
+        if (props.campsite) {
             return (
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-5 m-1 align-center">                                            
-                        <div>{this.renderCampsite(this.props.campsite)}</div>
-                        </div>
-                        <div className="col-md-5 m-1 text-center"> 
-                        <div>{this.renderComments(this.props.campsite.comments)}</div> 
-                        </div>                   
+                        <RenderCampsite campsite={props.campsite} />
+                        <RenderComments comments={props.campsite.comments} />
                     </div>
                 </div>
-                )
+            );
         }
-        return (
-            <div></div>
-        )
+        return <div />;
     }
-}
-
-export default CampsiteInfo;
+}   
+    export default CampsiteInfo;
