@@ -1,8 +1,8 @@
 import React from 'react';
 import { Media } from 'reactstrap';
 
-function RenderPartner(props) {
-    const {name, image, description} = props;
+function RenderPartner({partners}) {
+    const {name, image, description} = {partners};
 
     return (
         <React.Fragment>
